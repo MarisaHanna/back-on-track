@@ -34,7 +34,7 @@ router.post('/api/workouts', ({ body }, res) => {
 });
 
 router.put('/api/workouts/:id', ({body, params}, res) => {
-    Fitness.findByIdAndUpdate(params.id, {$push: {exercises: body}}, {new: true})
+    Fitness.findByIdAndUpdate(params.id, {$push: {exercises: body}})
     .then((dbExercise) => {
         res.json(dbExercise);
     })
@@ -42,3 +42,5 @@ router.put('/api/workouts/:id', ({body, params}, res) => {
         res.json(err);
     });
 });
+
+module.exports = router;
