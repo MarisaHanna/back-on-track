@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const morgan =require('morgan');
 
-const PORT = process.env.PORT || 3007
+const PORT = process.env.PORT || 3003
 
 const app = express();
 

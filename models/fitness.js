@@ -8,15 +8,15 @@ const fitnessSchema = new Schema({
         default:Date.now()
     },
     exercises:[{
-        type:{
-            type: String,
-            trim: true,
-            required: 'Please enter your workout type '
-        },
         name:{
             type: String,
             trim: true,
             required: 'Please enter your workout name'
+        },
+        type:{
+            type: String,
+            trim: true,
+            required: 'Please enter your workout type '
         },
         duration:{
             type: Number,
@@ -33,7 +33,7 @@ const fitnessSchema = new Schema({
         },
         distance:{
             type: Number
-        },
+        }
     }]
 });
 
